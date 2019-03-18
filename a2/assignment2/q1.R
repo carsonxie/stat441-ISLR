@@ -1,0 +1,11 @@
+d = read.table("/media/carson/60E810DFE810B56E/New/#STUDY/#12 2019 Winter/Stat 441/assignment2/toy.txt",header = T)
+attach(d)
+#View(d)
+###(a)
+plot(X1,X2, pch = type+1)
+points(2.3,3.6, pch=2)
+abline(-0.5, 1, lty=1)
+abline(0, 1,lty = 3)
+abline(-1, 1,lty = 3)
+abline(-0.4,1,lty = 4)
+

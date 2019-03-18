@@ -16,6 +16,12 @@ for (w in c(0.1,1,2,3,4,5)){
   #lines(ksmooth(dis,nox, "normal", bandwidth = w), lty=w, col=w)
   normal.rss[w] = sum((nox - fit$y)^2)
 }
+#try part b
+fit1 = ksmooth(dis,nox, kernel = c("box"), bandwidth = 0.1)
+fit2 = ksmooth(dis,nox, kernel = c("box"), bandwidth = 0.5)
+plot(fit1,lwd=0.5,pch=1,type="b",lty=1)
+points(fit2,lwd=0.3,pch=2,col='red')
+
 #b, apply cv for normal kernel use
 #ucv() or bcv() to find the best bandwidth
 library(MASS)
